@@ -1,13 +1,15 @@
 :root {
-  --background: #ffffff;
+  --background: #7c9083;
   --foreground: #171717;
+  --font: #355240;
+  --whcolor: #f7f7f7;
+  --btncolor: linear-gradient(135deg, #234e35ff, #4e5752ff);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html,
@@ -17,26 +19,118 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--font);
+  /* background: var(--background); */
+  position: relative;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* バックのビデオ */
+.movie_blk {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+.movie_blk video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
+/* リセット */
 a {
-  color: inherit;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* 共通 */
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2%;
 }
+.btn {
+  width: 120px;
+  height: 37px;
+  background: var(--btncolor);
+  border-radius: 25px;
+  text-align: center;
+  line-height: 2.3;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.15, 1.15);
+}
+.btn a {
+    color: var(--whcolor);
+}
+/* ヘッダー */
+.header-flex {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-flex {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* フッター */
+footer {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 2.5;
+
+}
+
+/* メイン */
+.back-seet {
+  width: 100%;
+  height: 70vh;
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 0.6);
+
+
+}
+.top-flex {
+  display: flex;
+
+}
+.top-image {
+  flex-basis: 70%;
+  height: 100%;
+  background-color: #cccccc;
+  border-radius: 40px;
+}
+.top-h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 30%;
+  font-size: 32px;
+}
+.page-title {
+  text-align: center;
+  padding-top: 40px;
+}
+.page-title h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+
+}
+.page-title p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+
