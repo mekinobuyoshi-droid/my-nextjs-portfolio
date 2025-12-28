@@ -82,7 +82,9 @@ a {
   gap: 20px;
   list-style: none;
 }
-
+h1 a {
+  color: var(--font);
+}
 /* フッター */
 footer {
     width: 100%;

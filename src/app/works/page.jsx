@@ -1,22 +1,23 @@
 import { SiteData } from "@/data/SiteData";
+import { WorksData } from "@/data/SiteData";
+import WorksCard from "../components/WorksCard";
 
 export const metadata = {
     title: "Works",
 };
 
-const Works = () => {
+const WorksPage = () => {
    const {title, text} = SiteData[1];
   return (
-
-    <section className="wrapper">
-      <div className="back-seet">
-            <div className="page-title">
-                <h2>{title}</h2>
-                <p>{text}</p>
-            </div>
-
-      </div>
-    </section>
+          <div className="page-title">
+              <h2>{title}</h2>
+              <p>{text}</p>
+              <div>
+                  {WorksData.map((work) => (
+                    <WorksCard key={work.id}  work={work} />
+                  ))}
+              </div>
+          </div>
   )
 }
-export default Works;
+export default WorksPage;

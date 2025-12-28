@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="ja">
         <body>
            <div className="movie_blk">
-            <video src="top-video.mp4" autoPlay muted loop playsInline></video>
+            <video src="/top-video.mp4" autoPlay muted loop playsInline></video>
           </div>
           <Header />
           <main>
