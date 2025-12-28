@@ -1,4 +1,5 @@
 import { WorksData } from "@/data/SiteData";
+import Button from "@/app/components/Button";
 
 export const generateMetadata = async ({params}) => {
     const {id} = await params;
@@ -16,10 +17,19 @@ const WorkDetail = async ({params}) => {
     if(!Work) return <p>記事が見つかりません</p>;
 
     return (
-        <div>
+        <div className="work-pages">
             <h2>{Work.title}</h2>
             <p>{Work.text}</p>
-
+            <figure><img src={Work.img} alt={Work.title} /></figure>
+            {Work.explanation.map((section,index) => (
+                <div key={index} className="explanation-sec">
+                    <h3>{section.heading}</h3>
+                    <p>{section.content}</p>
+                </div>
+            ))}
+            <ul>
+              <Button url={Work.url} title={"作品ページへ"} />
+            </ul>
         </div>
     )
 }

@@ -2,10 +2,13 @@ import Link from "next/link";
 import Button from "./Button";
 const WorksCard = ({work}) => {
     return (
-        <div>
+        <div className="work-card">
             <h3>{work.title}</h3>
+            <figure><img src={work.img} alt={work.title} /></figure>
             <p>{work.text}</p>
-            <Button url={`/works/${work.id}`} title={`${work.title}ページ`} />
+            <ul>
+               <Button url={`/works/${work.id}`} title={`詳細ページ`} />
+            </ul>
         </div>
     )
 }

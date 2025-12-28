@@ -3,7 +3,8 @@
   --foreground: #171717;
   --font: #355240;
   --whcolor: #f7f7f7;
-  --btncolor: linear-gradient(135deg, #234e35ff, #4e5752ff);
+  --btncolor:  #234e35ff;
+  /* --btncolor: linear-gradient(135deg, #234e35ff, #4e5752ff); */
 }
 
 * {
@@ -46,17 +47,24 @@ body {
 a {
   text-decoration: none;
 }
+ul li {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
 
 /* 共通 */
 .wrapper {
-  max-width: 1280px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 2%;
+  padding: 0 2%;
 }
 .btn {
-  width: 120px;
+  min-width: 120px;
+  max-width: 150px;
   height: 37px;
-  background: var(--btncolor);
+  background-color: var(--btncolor);
   border-radius: 25px;
   text-align: center;
   line-height: 2.3;
@@ -64,9 +72,12 @@ a {
   transition: all .3s ease-in-out;
 }
 .btn:hover {
-  transform: scale(1.15, 1.15);
+  /* transform: scale(1.15, 1.15); */
+  background-color: var(--background);
 }
 .btn a {
+    display: block;
+    width: 100%;
     color: var(--whcolor);
 }
 /* ヘッダー */
@@ -95,10 +106,20 @@ footer {
 }
 
 /* メイン */
-.back-seet {
+.back-seet-top {
   width: 100%;
   height: 70vh;
   border-radius: 40px;
+  background-color: rgba(255, 255, 255, 0.6);
+
+
+}
+.back-seet {
+  width: 100%;
+  /* height: 80vh; */
+  min-height: 70vh;
+  border-radius: 40px;
+  padding: 40px;
   background-color: rgba(255, 255, 255, 0.6);
 
 
@@ -118,20 +139,89 @@ footer {
   justify-content: center;
   align-items: center;
   flex-basis: 30%;
-  font-size: 32px;
+  font-size: 26px;
 }
 .page-title {
   text-align: center;
-  padding-top: 40px;
+  /* padding-top: 40px; */
+  margin-bottom: 30px;
 }
 .page-title h2 {
   font-size: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
 }
 .page-title p {
   font-size: 16px;
   font-weight: bold;
+}
+
+/* ワークのページ */
+.workdata-flex {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.work-card {
+  min-width: 150px;
+  max-width: 300px;
+  min-height: 450px;
+  /* text-align: center; */
+  background-color: var(--whcolor);
+  border-radius: 20px;
+  padding: 20px;
+}
+.work-card h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.work-card p {
+  margin-bottom: 30px;
+  text-align: justify;
+}
+.work-card ul li {
+  margin: 0 auto;
+}
+.work-card figure {
+  margin-bottom: 20px;
+}
+.work-card figure img {
+  width: 100%;
+}
+.work-pages h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.work-pages > p {
+  text-align: center;
+  margin-bottom: 30px;
+} 
+.explanation-sec {
+  margin-bottom: 30px;
+}
+.explanation-sec h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.explanation-sec p {
+  white-space: pre-wrap;
+  margin-bottom: 30px;
+}
+.work-pages ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.work-pages ul li {
+  width: 100%;
+}
+.work-pages figure {
+  max-width: 600px;
+  margin: 20px auto;
 }
 
 

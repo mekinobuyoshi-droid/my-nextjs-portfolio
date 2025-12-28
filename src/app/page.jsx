@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <section className="wrapper">
-      <div className="back-seet top-flex">
+      <div className="back-seet-top top-flex">
         <div className="top-image">
           <figure><img src="" alt="" /></figure>
         </div>
