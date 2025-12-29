@@ -62,7 +62,7 @@ img {
 }
 .btn {
   min-width: 120px;
-  max-width: 150px;
+  max-width: 170px;
   height: 37px;
   background-color: var(--btncolor);
   border-radius: 25px;
@@ -79,6 +79,16 @@ img {
     display: block;
     width: 100%;
     color: var(--whcolor);
+}
+.external-rink {
+  position: relative;
+}
+.external-rink::after {
+  position: absolute;
+  right: 10px;
+  top: 3px;
+  
+  content: url(/external-icon.svg);
 }
 /* ヘッダー */
 .header-flex {

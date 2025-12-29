@@ -28,7 +28,7 @@ const WorkDetail = async ({params}) => {
                 </div>
             ))}
             <ul>
-              <Button url={Work.url} title={"作品ページへ"} />
+              <Button url={Work.url} title={"作品サイト"} target />
             </ul>
         </div>
     )
