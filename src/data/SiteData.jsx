@@ -92,3 +92,65 @@ export const AboutData = {
     }
   ]
 };
+
+export const ContactData = {
+  // 連絡先セクション（ここを配列にしたで！）
+  contact: {
+    title: "Contact",
+    items: [
+      { 
+        label: "Email", 
+        value: "mekinobuyoshi@gmail.com", 
+        link: "mailto:mekinobuyoshi@gmail.com" 
+      },
+      { 
+        label: "GitHub", 
+        value: "mekinobuyoshi-droid", 
+        link: "https://github.com/mekinobuyoshi-droid" 
+      }
+    ]
+  },
+
+  // このサイトの構成セクション
+  siteStructure: {
+    title: "このサイトの構成",
+    description: "このポートフォリオは、あとで中身を増やすのが楽になるように「管理のしやすさ」を一番に考えて作っています。",
+    points: [
+      {
+        subtitle: "Framework",
+        detail: "Next.js"
+      },
+      {
+        subtitle: "Worksページの動的生成",
+        detail: "制作実績が増えても、リストに情報を追加するだけで自動的に新しい個別ページが作成される仕組みにしています。"
+      },
+      {
+        subtitle: "全テキストの一元管理",
+        detail: "サイト内の文章はすべて専用のデータファイルから呼び出しています。一箇所を直せば全体に反映される、ミスのない管理を意識しています。"
+      },
+    ]
+  },
+  image: {
+    url: "/contact-img01.jpg",
+    alt: "自宅",
+  },
+  update: "最終更新：2025年12月31日",
+};
+
+export const HeroSlides = [
+  { 
+    id: 1, 
+    src: "/slide-img01.jpg", 
+    alt: "スライド画像1", 
+},
+  { 
+    id: 2, 
+    src: "/slide-img02.jpg", 
+    alt: "スライド画像2", 
+},
+  { 
+    id: 3, 
+    src: "/slide-img03.jpg", 
+    alt: "スライド画像3", 
+ },
+];

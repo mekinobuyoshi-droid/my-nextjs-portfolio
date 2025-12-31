@@ -127,7 +127,7 @@ footer {
 /* メイン */
 .back-seet-top {
   width: 100%;
-  height: 70vh;
+  height: 78vh;
   border-radius: 40px;
   background-color: rgba(255, 255, 255, 0.6);
 
@@ -149,10 +149,40 @@ footer {
 }
 .top-image {
   flex-basis: 70%;
+  position: relative;
+  width: 100%;
   height: 100%;
-  background-color: #cccccc;
+  overflow: hidden;
   border-radius: 40px;
+  background-color: #000; 
 }
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 1;
+  transform: scale(1.1);
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+  animation: zoom-up 5s linear forwards;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes zoom-up {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
 .top-h2 {
   display: flex;
   justify-content: center;
@@ -194,7 +224,7 @@ footer {
   border-radius: 20px;
   padding: 20px;
 }
-.work-card h3 {
+.work-card h2 {
   font-size: 20px;
   margin-bottom: 20px;
   text-align: center;
@@ -281,5 +311,31 @@ footer {
   flex-basis: 65%;
 }
 
-
-
+/* コンタクトページ */
+.contact-flex {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.contact-text {
+  flex-basis: 50%;
+}
+.contact-img {
+  flex-basis: 45%;
+  
+}
+.contact-img img {
+  border-radius: 20px;
+}
+.contact-text h2 {
+  margin-bottom: 20px;
+}
+.contact-text p {
+  margin-bottom: 20px;
+}
+.contact-section {
+  margin-bottom: 50px;
+}
+.sitestructure-section > p {
+  margin-bottom: 20px;
+}
