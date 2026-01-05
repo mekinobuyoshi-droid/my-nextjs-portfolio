@@ -65,7 +65,7 @@ img {
 
 /* 共通 */
 .wrapper {
-  max-width: 1000px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 0 2%;
 }
@@ -96,7 +96,7 @@ img {
   position: absolute;
   right: 10px;
   top: 3px;
-  
+
   content: url(/external-icon.svg);
 }
 /* ヘッダー */
@@ -154,7 +154,7 @@ footer {
   height: 100%;
   overflow: hidden;
   border-radius: 40px;
-  background-color: #000; 
+  background-color: #000;
 }
 
 .slide {
@@ -249,7 +249,7 @@ footer {
 .work-pages > p {
   text-align: center;
   margin-bottom: 30px;
-} 
+}
 .explanation-sec {
   margin-bottom: 30px;
 }
@@ -322,10 +322,13 @@ footer {
 }
 .contact-img {
   flex-basis: 45%;
-  
+  height: 70vh;
+
 }
 .contact-img img {
   border-radius: 20px;
+  object-fit: cover;
+  height: 100%;
 }
 .contact-text h2 {
   margin-bottom: 20px;
@@ -338,4 +341,56 @@ footer {
 }
 .sitestructure-section > p {
   margin-bottom: 20px;
+}
+
+
+/* レスポンシブ */
+@media screen and (max-width:768px) {
+  .back-seet-top {
+    height: 85vh;
+  }
+  .top-flex {
+    flex-direction: column-reverse;
+  }
+  .top-image {
+    flex-basis: 100%;
+  }
+  .about-profile {
+    gap: 20px;
+  }
+   .about-profile figure {
+    flex-basis: 50%;
+   }
+   .about-profile > div {
+    flex-basis: 50%;
+   }
+   .contact-flex  {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+   }
+   .contact-img {
+    flex-basis: 100%;
+
+   }
+   .contact-img img {
+     width: 50vw;
+     max-width: 400px;
+    height: 100vh;
+    max-height: 300px;
+   }
+   .contact-text h2 {
+    font-size: 35px;
+    text-align: center;
+   }
+
+}
+@media screen and (max-width:480px) {
+  .workdata-flex {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .about-profile {
+    flex-direction: column;
+  }
 }
