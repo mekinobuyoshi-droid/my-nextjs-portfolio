@@ -65,7 +65,8 @@ export const WorksData = [
         url: "https://next-plus-microcms.vercel.app/",
     },
 
-   
+
+
 
 
 
@@ -101,15 +102,15 @@ export const ContactData = {
   contact: {
     title: "Contact",
     items: [
-      { 
-        label: "Email", 
-        value: "mekinobuyoshi@gmail.com", 
-        link: "mailto:mekinobuyoshi@gmail.com" 
+      {
+        label: "Email",
+        value: "mekinobuyoshi@gmail.com",
+        link: "mailto:mekinobuyoshi@gmail.com"
       },
-      { 
-        label: "GitHub", 
-        value: "mekinobuyoshi-droid", 
-        link: "https://github.com/mekinobuyoshi-droid" 
+      {
+        label: "GitHub",
+        value: "mekinobuyoshi-droid",
+        link: "https://github.com/mekinobuyoshi-droid"
       }
     ]
   },
@@ -141,19 +142,19 @@ export const ContactData = {
 };
 
 export const HeroSlides = [
-  { 
-    id: 1, 
-    src: "/slide-img01.jpg", 
-    alt: "スライド画像1", 
+  {
+    id: 1,
+    src: "/slide-img01.jpg",
+    alt: "スライド画像1",
 },
-  { 
-    id: 2, 
-    src: "/slide-img02.jpg", 
-    alt: "スライド画像2", 
+  {
+    id: 2,
+    src: "/slide-img02.jpg",
+    alt: "スライド画像2",
 },
-  { 
-    id: 3, 
-    src: "/slide-img03.jpg", 
-    alt: "スライド画像3", 
+  {
+    id: 3,
+    src: "/slide-img03.jpg",
+    alt: "スライド画像3",
  },
 ];
