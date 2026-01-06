@@ -1,4 +1,10 @@
 export const SiteData = [
+            {
+        id: 0,
+        title: "Top",
+        text: "",
+        url: "/",
+    },
     {
         id: 1,
         title: "About",
@@ -17,6 +23,7 @@ export const SiteData = [
         text: "連絡先",
         url: "/contact",
     },
+
 ];
 
 export const WorksData = [

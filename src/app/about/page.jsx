@@ -5,7 +5,7 @@ export const metadata = {
 };
 
 const About = () => {
-    const {title, text} = SiteData[0];
+    const {title, text} = SiteData[1];
     return (
      <section className="wrapper">
       <div className="back-seet">

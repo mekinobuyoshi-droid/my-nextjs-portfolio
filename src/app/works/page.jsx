@@ -7,14 +7,14 @@ export const metadata = {
 };
 
 const WorksPage = () => {
-   const {title, text} = SiteData[1];
+   const {title, text} = SiteData[2];
   return (
         <>
           <div className="page-title">
               <h2>{title}</h2>
               <p>{text}</p>
           </div>
-          
+
           <div className="workdata-flex">
               {WorksData.map((work) => (
                 <WorksCard key={work.id}  work={work} />
