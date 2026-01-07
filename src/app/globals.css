@@ -348,10 +348,10 @@ footer {
 /* レスポンシブ */
 @media screen and (max-width:768px) {
   .header-flex {
-    height: 10vh;
+    height: 10dvh;
   }
   .back-seet-top {
-    height: 85vh;
+    height: 85dvh;
   }
   .top-flex {
     flex-direction: column-reverse;
@@ -378,9 +378,9 @@ footer {
 
    }
    .contact-img img {
-     width: 65vw;
+     width: 65dvw;
      max-width: 400px;
-    height: 100vh;
+    height: 100dvh;
     max-height: 300px;
    }
    .contact-text h2 {
@@ -390,7 +390,7 @@ footer {
 
 
   footer {
-    height: 5vh;
+    height: 5dvh;
   }
      /* ハンバーガーメニュー */
   .header {
@@ -445,7 +445,7 @@ footer {
   top: 0;
   left: 0;
   width: 300px;
-  height: 100vh;
+  height: 100dvh;
   background-color: #fff;
   box-shadow: 2px 0 4px rgba(0,0,0,.1);
   transform: translateX(-100%);
@@ -494,8 +494,8 @@ footer {
   .global-manu.active {
     position: fixed;
     background-color: #171717;
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     z-index: 999;
   }
 
