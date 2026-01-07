@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 const noto = Noto_Sans_JP({
   subsets: ['latin'],
-  variable: '--font-noto', 
+  variable: '--font-noto',
   display: 'swap',
 });
 
