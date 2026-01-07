@@ -73,10 +73,6 @@ export const WorksData = [
     },
 
 
-
-
-
-
 ];
 
 export const AboutData = {
@@ -105,7 +101,7 @@ export const AboutData = {
 };
 
 export const ContactData = {
-  // 連絡先セクション（ここを配列にしたで！）
+
   contact: {
     title: "Contact",
     items: [
@@ -122,7 +118,7 @@ export const ContactData = {
     ]
   },
 
-  // このサイトの構成セクション
+ 
   siteStructure: {
     title: "このサイトの構成",
     description: "このポートフォリオは、あとで中身を増やすのが楽になるように「管理のしやすさ」を一番に考えて作っています。",
