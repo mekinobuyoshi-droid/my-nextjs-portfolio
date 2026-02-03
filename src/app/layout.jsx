@@ -1,5 +1,5 @@
 import { Noto_Sans_JP, Roboto } from 'next/font/google';
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -25,9 +25,12 @@ export const metadata = {
   description: "目木伸宜のポートフォリオサイトです",
 }
 
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="ja" className={`${noto.variable} ${roboto.variable}`}>
+      <GoogleTagManager gtmId="GTM-N4BCSHR8" />
         <body>
            <div className="movie_blk">
             <video src="/top-video.mp4" autoPlay muted loop playsInline></video>
@@ -39,7 +42,7 @@ export default function RootLayout({ children }) {
 
           </main>
           <Footer />
-          <GoogleAnalytics gaId="G-TJJR8JCMND" />
+          {/* <GoogleAnalytics gaId="G-TJJR8JCMND" /> */}
         </body>
     </html>
   );
