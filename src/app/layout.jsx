@@ -34,25 +34,31 @@ export default function RootLayout({ children }) {
         <body>
           <GoogleTagManager gtmId="GTM-N4BCSHR8" />
           {/* クライアントIDをGA4に送るためのスクリプト */}
-           <Script id="ga-debugger" strategy="afterInteractive">
+          <Script id="ga-client-id" strategy="afterInteractive">
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
 
-                // ここで直接GA4を初期化して、debug_modeを強制注入する
-                gtag('config', 'G-TJJR8JCMND', {
-                  'debug_mode': true,
-                  'my_client_id': 'temporary_id_test'
-                });
+                // GA4が準備できるのを待ってから実行する
+                function sendClientId() {
+                  if (typeof gtag === 'function') {
+                    gtag('get', 'G-TJJR8JCMND', 'client_id', (clientId) => {
+                      if (clientId) {
+                        console.log('✅ ClientID取得成功:', clientId);
+                        gtag('config', 'G-TJJR8JCMND', {
+                          'my_client_id': clientId,
+                          'debug_mode': true
+                        });
+                      } else {
+                        // 取れなかったら0.5秒後に再トライ
+                        setTimeout(sendClientId, 500);
+                      }
+                    });
+                  }
+                }
 
-                // クライアントIDを取得して再送する
-                gtag('get', 'G-TJJR8JCMND', 'client_id', (clientId) => {
-                  gtag('config', 'G-TJJR8JCMND', {
-                    'my_client_id': clientId,
-                    'debug_mode': true
-                  });
-                });
+                // 実行開始
+                sendClientId();
               `}
             </Script>
            <div className="movie_blk">
