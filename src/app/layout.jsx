@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
         <body>
           <GoogleTagManager gtmId="GTM-N4BCSHR8" />
           {/* クライアントIDをGA4に送るためのスクリプト */}
-           <Script id="ga-client-id" strategy="afterInteractive">
+           {/* <Script id="ga-client-id" strategy="afterInteractive">
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
                 });
               });
             `}
-          </Script>
+          </Script> */}
            <div className="movie_blk">
             <video src="/top-video.mp4" autoPlay muted loop playsInline></video>
           </div>
