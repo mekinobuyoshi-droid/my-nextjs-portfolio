@@ -34,19 +34,20 @@ export default function RootLayout({ children }) {
         <body>
           <GoogleTagManager gtmId="GTM-N4BCSHR8" />
           {/* クライアントIDをGA4に送るためのスクリプト */}
-            <Script id="ga-client-id" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
+           <Script id="ga-client-id" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
 
-                // GTM経由でもGA4の測定ID（G-XXXX）がわかれば直接指示出しできる
-                gtag('get', 'G-TJJR8JCMND', 'client_id', (clientId) => {
-                  gtag('config', 'G-TJJR8JCMND', {
-                    'my_client_id': clientId
-                  });
+              gtag('get', 'G-TJJR8JCMND', 'client_id', (clientId) => {
+                // debug_mode: true を追加して、強制的にDebugViewに表示させる
+                gtag('config', 'G-TJJR8JCMND', {
+                  'my_client_id': clientId,
+                  'debug_mode': true
                 });
-              `}
-            </Script>
+              });
+            `}
+          </Script>
            <div className="movie_blk">
             <video src="/top-video.mp4" autoPlay muted loop playsInline></video>
           </div>
