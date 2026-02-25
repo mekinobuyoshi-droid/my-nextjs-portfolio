@@ -210,21 +210,22 @@ footer {
 
 /* ワークのページ */
 .workdata-flex {
-  max-width: 900px;
+  max-width: 1000px; /* 3つ並ぶように少し広げると余裕が出ます */
   margin: 0 auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap; /* これがないと横一行に突き進んでしまいます */
+  justify-content: flex-start; /* 左詰め（中央寄せなら center） */
+  align-items: stretch; /* 高さを揃える */
   gap: 30px;
 }
 .work-card {
-  min-width: 150px;
-  max-width: 300px;
-  min-height: 450px;
-  /* text-align: center; */
+  width: calc((100% - 60px) / 3);
+  min-width: 280px; /* 狭くなりすぎないように保持 */
   background-color: var(--whcolor);
   border-radius: 20px;
   padding: 20px;
+  display: flex;
+  flex-direction: column; /* 中身を縦に並べる */
 }
 .work-card h2 {
   font-size: 20px;
@@ -232,6 +233,7 @@ footer {
   text-align: center;
 }
 .work-card p {
+  flex-grow: 1; /* テキスト量にかかわらず、下のスペースを埋める */
   margin-bottom: 30px;
   text-align: justify;
 }

@@ -89,11 +89,11 @@ export const WorksData = [
                 content: "全デバイスで表示が崩れないよう、メディアクエリを使用してスマートフォン・タブレット・PCそれぞれに最適化。また、後からの修正が容易になるよう、CSS変数（Custom Properties）を用いてカラーコードや共通の余白を一括管理する工夫をしています。"
             },
         ],
-        img: "/work-img03.jpg",
+        img: "/work-img03.png",
         url: "（https://lp-nine-sooty.vercel.app/",
     },
     {
-      d: 4,
+      id: 4,
         title: "GA4解析レポートアプリ『Arcana』",
         text: "Google Analytics 4の複雑なデータを独自の視点で抽出し、AIによる客観的な評価を可能にした分析ダッシュボード。",
         explanation: [
