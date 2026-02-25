@@ -90,7 +90,7 @@ export const WorksData = [
             },
         ],
         img: "/work-img03.png",
-        url: "（https://lp-nine-sooty.vercel.app/",
+        url: "https://lp-nine-sooty.vercel.app/",
     },
     {
       id: 4,
